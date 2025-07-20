@@ -26,8 +26,7 @@ const Login = ({ onLogin }) => {
       .from('users')
       .select('*')
       .eq('username', formData.username)
-      .eq('password', formData.password) // Untuk demo, plaintext!
-      .single();
+      .eq('password', formData.password);
 
     if (error || !data) {
       toast({
